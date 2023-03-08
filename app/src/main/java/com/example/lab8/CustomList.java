@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
+
 public class CustomList extends ArrayAdapter<City> {
 
     private ArrayList<City> cities;
@@ -53,7 +54,12 @@ public class CustomList extends ArrayAdapter<City> {
         this.cities.add(city);
     }
     public boolean hasCity(City city){
-        return false;
+        if (cities.contains(city)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 }
